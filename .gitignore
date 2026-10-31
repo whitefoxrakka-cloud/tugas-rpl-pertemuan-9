@@ -1,0 +1,14 @@
+# Lingkungan virtual
+.venv/
+
+# Database lokal
+*.db
+*.sqlite
+*.sqlite3
+
+# Berkas Python
+__pycache__/
+*.pyc
+
+# Berkas rahasia
+.env

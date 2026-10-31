@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<title>Mockup UI - Sistem Prediksi Kelulusan</title>
+<style>
+  :root {
+    --garis: #d5d9e0;
+    --teks: #1f2937;
+    --teks-lemah: #5b6573;
+    --aksen: #1f6feb;
+    --latar: #eef1f6;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 40px 24px 56px;
+    background: var(--latar);
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--teks);
+  }
+  .bingkai {
+    max-width: 880px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid var(--garis);
+    border-radius: 14px;
+    padding: 32px 36px 40px;
+    box-shadow: 0 8px 24px rgba(31, 41, 55, 0.08);
+  }
+  .label-rendah {
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--teks-lemah);
+    margin-bottom: 6px;
+  }
+  h1 {
+    font-size: 30px;
+    margin: 0 0 6px;
+  }
+  .keterangan {
+    margin: 0 0 28px;
+    color: var(--teks-lemah);
+    font-size: 15px;
+  }
+  .form {
+    border: 2px dashed var(--garis);
+    border-radius: 12px;
+    padding: 22px 24px 24px;
+    background: #fbfcfe;
+  }
+  .form h2 {
+    font-size: 16px;
+    margin: 0 0 18px;
+    color: var(--teks-lemah);
+    font-weight: 600;
+  }
+  .bidang { margin-bottom: 16px; }
+  .bidang label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .kotak {
+    height: 40px;
+    border: 1px solid var(--garis);
+    border-radius: 8px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    color: var(--teks-lemah);
+    font-size: 14px;
+  }
+  .dua-kolom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .tombol {
+    display: inline-block;
+    margin-top: 6px;
+    background: var(--aksen);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 11px 22px;
+    border-radius: 8px;
+  }
+  .area-hasil {
+    margin-top: 22px;
+    border: 1px solid #b7e0c0;
+    background: #eefaf1;
+    border-radius: 10px;
+    padding: 14px 18px;
+    font-size: 15px;
+  }
+  .area-hasil.gagal {
+    border-color: #f0c2c2;
+    background: #fdf0f0;
+  }
+  .riwayat {
+    margin-top: 34px;
+  }
+  .riwayat h2 {
+    font-size: 20px;
+    margin: 0 0 14px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    border: 1px solid var(--garis);
+  }
+  th, td {
+    border-bottom: 1px solid var(--garis);
+    padding: 10px 12px;
+    text-align: left;
+  }
+  th {
+    background: #f6f8fb;
+    font-weight: 600;
+    color: var(--teks-lemah);
+  }
+  .catatan {
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--teks-lemah);
+  }
+</style>
+</head>
+<body>
+  <div class="bingkai">
+    <p class="label-rendah">Mockup Rancangan Antarmuka</p>
+    <h1>Sistem Prediksi Kelulusan</h1>
+    <p class="keterangan">Masukkan data mahasiswa, sistem akan memprediksi status kelulusannya.</p>
+
+    <div class="form">
+      <h2>Form Input Data Mahasiswa</h2>
+
+      <div class="bidang">
+        <label for="nama">Nama Mahasiswa</label>
+        <div class="kotak" id="nama">Tulis nama lengkap</div>
+      </div>
+
+      <div class="dua-kolom">
+        <div class="bidang">
+          <label for="ipk">IPK (0.0 - 4.0)</label>
+          <div class="kotak" id="ipk">3.45</div>
+        </div>
+        <div class="bidang">
+          <label for="sks">Total SKS</label>
+          <div class="kotak" id="sks">148</div>
+        </div>
+      </div>
+
+      <div class="tombol">Prediksi &amp; Simpan</div>
+    </div>
+
+    <div class="area-hasil">Hasan dinyatakan <strong>Lulus Tepat Waktu</strong>!</div>
+    <div class="area-hasil gagal">Siti dinyatakan <strong>Tidak Lulus</strong>.</div>
+
+    <div class="riwayat">
+      <h2>Riwayat Prediksi</h2>
+      <table>
+        <thead>
+          <tr><th>Nama</th><th>IPK</th><th>SKS</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Siti</td><td>2.85</td><td>132</td><td>Tidak Lulus</td></tr>
+          <tr><td>Hasan</td><td>3.45</td><td>148</td><td>Lulus Tepat Waktu</td></tr>
+        </tbody>
+      </table>
+      <p class="catatan">Area hasil menampilkan status prediksi dan tabel riwayat data dari database.</p>
+    </div>
+  </div>
+</body>
+</html>

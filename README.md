@@ -67,6 +67,16 @@ Data tersimpan pada `data_prediksi.db` di folder proyek.
 2. Uji lewat browser sungguhan (Playwright memakai Chrome terpasang) sekaligus
    mengambil gambar `gambar/aplikasi_berjalan.png`.
 
+## Tangkapan Layar
+
+Mockup rancangan antarmuka:
+
+![Mockup UI](gambar/mockup_ui.png)
+
+Aplikasi berjalan setelah form diisi dan data tersimpan:
+
+![Aplikasi berjalan](gambar/aplikasi_berjalan.png)
+
 ## Bukti untuk Lembar Evaluasi
 
 | No | Aspek | Bukti |

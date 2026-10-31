@@ -39,8 +39,11 @@ Praktikum_RPL_9/
 ## Cara Menjalankan
 
 ```powershell
-cd "D:\tugas baru yang harus di kerjakan\RPL\tugas baru\Praktikum_RPL_9"
+git clone https://github.com/whitefoxrakka-cloud/tugas-rpl-pertemuan-9.git
+cd tugas-rpl-pertemuan-9
+python -m venv .venv
 .\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
 streamlit run app.py
 ```
 
@@ -49,6 +52,9 @@ Bila memakai Python lain, pasang dulu paketnya:
 ```powershell
 pip install -r requirements.txt
 ```
+
+Salin `.env.example` menjadi `.env` bila berkas `.env` belum ada, isinya
+`DATABASE_URL=sqlite:///data_prediksi.db`.
 
 Aplikasi terbuka di `http://localhost:8501`. Isi form lalu tekan **Prediksi & Simpan**.
 Data tersimpan pada `data_prediksi.db` di folder proyek.
